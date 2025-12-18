@@ -3,53 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <title>Tirumala Live Pilgrim Help</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #f5f5f5;
 }
 
 header {
   background: #7b1e1e;
-  color: white;
-  padding: 20px;
+  color: #fff;
   text-align: center;
+  padding: 25px 15px;
 }
 
 header h1 {
   margin: 0;
+  font-size: 24px;
 }
 
 header p {
-  margin: 6px 0;
+  margin: 8px 0 0;
   font-size: 14px;
 }
 
-.section {
-  background: white;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 10px;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
 }
 
-.locked {
-  filter: blur(4px);
+/* LOCK OVERLAY */
+.lock-box {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.lock-box h2 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.pay-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* PAYMENT MODAL */
+#paymentBox {
+  display: none;
+  background: #fff;
+  border: 2px solid #7b1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#paymentBox h2 {
+  color: #7b1e1e;
+  text-align: center;
+}
+
+.upi {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  color: #000;
+}
+
+.unlock-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SERVICES */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  filter: blur(6px);
   pointer-events: none;
 }
 
-.help-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
 .help-card {
-  border: 1px solid #ddd;
-  padding: 12px;
+  background: #fff;
+  padding: 15px;
   border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .help-card h3 {
@@ -57,33 +117,36 @@ header p {
   color: #7b1e1e;
 }
 
-.btn {
+.help-card a {
   display: inline-block;
-  padding: 8px 12px;
   margin-top: 8px;
-  border-radius: 5px;
+  padding: 8px 10px;
+  background: #0b5ed7;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  color: white;
+  border-radius: 5px;
+  font-size: 13px;
 }
 
-.map-btn { background: #0b5ed7; }
-.pay-btn { background: #000; }
-.wa-btn { background: #25D366; }
-
-.center {
-  text-align: center;
+/* UNLOCKED STATE */
+.unlocked .help-grid {
+  filter: none;
+  pointer-events: auto;
 }
 
-.hidden {
-  display: none;
+/* SUPPORT */
+.support {
+  margin-top: 30px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 footer {
   text-align: center;
   font-size: 12px;
+  padding: 15px;
   color: #555;
-  padding: 10px;
 }
 </style>
 </head>
@@ -92,96 +155,85 @@ footer {
 
 <header>
   <h1>Tirumala Live Pilgrim Help</h1>
-  <p>Real-time queue updates & directions</p>
-  <p><b>Independent service. Not affiliated with TTD.</b></p>
-  <p><b>Pay ₹5 once → Unlock all locations</b></p>
+  <p>Real-time directions & guidance • Independent service • Not affiliated with TTD</p>
+  <p><strong>Pay ₹5 once → Unlock all locations</strong></p>
 </header>
 
-<!-- PAYMENT SECTION -->
-<div class="section center" id="paymentSection">
-  <h2>🔓 Unlock All Services — ₹5 Only</h2>
-  <p>Scan & pay ₹5 using any UPI app</p>
+<div class="container" id="main">
 
-  <img src="upi-qr.png" width="220"><br><br>
-
-  <b>UPI ID:</b> profesorsergio@ybl
-
-  <br><br>
-
-  <button class="btn pay-btn" onclick="unlockAccess()">I Have Paid ₹5 — Unlock Now</button>
-</div>
-
-<!-- SERVICES -->
-<div class="section">
-  <h2>📍 Pilgrim Services</h2>
-
-  <div id="services" class="help-grid locked">
-
-    <div class="help-card">
-      <h3>Darshan Queues</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Vaikuntham+Queue+Complex+Tirumala" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Restrooms & Water</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Tirumala+Restrooms" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Anna Prasadam</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Anna+Prasadam+Tirumala" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Laddu Counter</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Laddu+Counter+Tirumala" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Mudi (Tonsure)</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Mudi+Katta+Tirumala" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Locker & Slippers</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Locker+Facility+Tirumala" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Bus Stand</h3>
-      <a class="btn map-btnRA map-btn" href="https://maps.google.com/?q=Tirumala+Bus+Stand" target="_blank">View Location</a>
-    </div>
-
-    <div class="help-card">
-      <h3>Medical Emergency</h3>
-      <a class="btn map-btn" href="https://maps.google.com/?q=Medical+Centre+Tirumala" target="_blank">View Location</a>
-    </div>
-
+  <div class="lock-box">
+    <h2>🔒 Unlock All Services – ₹5 Only</h2>
+    <p>Scan & pay ₹5 using any UPI app.</p>
+    <a class="pay-btn" onclick="showPayment()">Pay Now</a>
   </div>
-</div>
 
-<!-- SUPPORT -->
-<div class="section center">
-  <h2>💬 Support</h2>
-  <a class="btn wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
+  <div id="paymentBox">
+    <h2>Pay ₹5 via UPI</h2>
+    <p style="text-align:center;">Send ₹5 to this UPI ID:</p>
+    <div class="upi">profesorsergio@ybl</div>
+
+    <p style="text-align:center;font-size:13px;">
+      After payment, click the button below.
+    </p>
+
+    <button class="unlock-btn" onclick="unlockServices()">I Have Paid ₹5 – Unlock</button>
+  </div>
+
+  <section>
+    <h2>📍 Pilgrim Services</h2>
+
+    <div class="help-grid">
+      <div class="help-card">
+        <h3>Darshan Queues</h3>
+        <a href="https://maps.google.com/?q=Vaikuntham+Queue+Complex+Tirumala" target="_blank">View Location</a>
+      </div>
+
+      <div class="help-card">
+        <h3>Restrooms & Water</h3>
+        <a href="https://maps.google.com/?q=Tirumala+Restrooms" target="_blank">View Location</a>
+      </div>
+
+      <div class="help-card">
+        <h3>Anna Prasadam</h3>
+        <a href="https://maps.google.com/?q=Anna+Prasadam+Tirumala" target="_blank">View Location</a>
+      </div>
+
+      <div class="help-card">
+        <h3>Laddu Counter</h3>
+        <a href="https://maps.google.com/?q=Laddu+Counter+Tirumala" target="_blank">View Location</a>
+      </div>
+
+      <div class="help-card">
+        <h3>Mudi (Tonsure)</h3>
+        <a href="https://maps.google.com/?q=Mudi+Katta+Tirumala" target="_blank">View Location</a>
+      </div>
+
+      <div class="help-card">
+        <h3>Medical Emergency</h3>
+        <a href="https://maps.google.com/?q=Medical+Center+Tirumala" target="_blank">View Location</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="support">
+    <h3>💬 Support</h3>
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
+  </div>
+
 </div>
 
 <footer>
-Independent pilgrim help service. Not affiliated with TTD.
+  Independent pilgrim help service. Not affiliated with TTD.
 </footer>
 
 <script>
-function unlockAccess() {
-  localStorage.setItem("paid", "yes");
-  document.getElementById("services").classList.remove("locked");
-  document.getElementById("paymentSection").classList.add("hidden");
+function showPayment() {
+  document.getElementById("paymentBox").style.display = "block";
 }
 
-window.onload = function() {
-  if (localStorage.getItem("paid") === "yes") {
-    document.getElementById("services").classList.remove("locked");
-    document.getElementById("paymentSection").classList.add("hidden");
-  }
+function unlockServices() {
+  document.getElementById("main").classList.add("unlocked");
+  alert("Thank you 🙏 Services unlocked.");
 }
 </script>
 

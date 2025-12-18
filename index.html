@@ -35,6 +35,48 @@ header p {
   font-weight: bold;
   border-radius: 5px;
 }
+  .help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.help-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.help-card h3 {
+  margin-top: 0;
+  color: #7b1e1e;
+  font-size: 18px;
+}
+
+.help-card p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.help-card a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.help-card a.map {
+  background: #0b5ed7;
+  margin-right: 6px;
+}
+
 section {
   padding: 25px 15px;
   background: white;
@@ -111,32 +153,77 @@ section li {
 
 </header>
   
- <section class="info-section">
+ <section>
   <h2>What We Help You With</h2>
 
-  <ul class="help-list">
-    <li><strong>Darshan Queues:</strong> Sarva Darshan, Footpath Darshan & VIP Break Darshan guidance</li>
+  <div class="help-grid">
 
-    <li><strong>Facilities:</strong> Nearest restrooms, drinking water & mobile charging points</li>
+    <!-- DARSHAN QUEUES -->
+    <div class="help-card">
+      <h3>Darshan Queues</h3>
+      <p>Sarva Darshan, Footpath & VIP Break Darshan guidance.</p>
+      <a class="map" href="https://maps.google.com/?q=Vaikuntham Queue Complex Tirumala" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/919632723847?text=I%20need%20help%20with%20Darshan%20Queue" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Anna Prasadam:</strong> Free food timings & locations</li>
+    <!-- RESTROOMS -->
+    <div class="help-card">
+      <h3>Restrooms & Water</h3>
+      <p>Nearest toilets & drinking water points.</p>
+      <a class="map" href="https://maps.google.com/?q=Tirumala Restrooms" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Need%20restroom%20location" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Laddu Prasadam:</strong> Token process & collection counters</li>
+    <!-- ANNA PRASADAM -->
+    <div class="help-card">
+      <h3>Anna Prasadam</h3>
+      <p>Free food timings & locations.</p>
+      <a class="map" href="https://maps.google.com/?q=Anna Prasadam Tirumala" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/919632723847?text=Anna%20Prasadam%20details" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Mudi (Tonsure):</strong> Free & paid hair offering counters</li>
+    <!-- LADDU COUNTER -->
+    <div class="help-card">
+      <h3>Laddu Prasadam</h3>
+      <p>Token & collection counter process.</p>
+      <a class="map" href="https://maps.google.com/?q=Laddu Counter Tirumala" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Laddu%20Prasadam%20help" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Locker & Slipper Stands:</strong> Baggage & footwear deposit locations</li>
+    <!-- MUDI -->
+    <div class="help-card">
+      <h3>Mudi (Tonsure)</h3>
+      <p>Free & paid hair offering counters.</p>
+      <a class="map" href="https://maps.google.com/?q=Mudi Katta Tirumala" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Mudi%20tonsure%20help" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Transport:</strong> Bus stand, Srivari Mettu & Alipiri route help</li>
+    <!-- LOCKER -->
+    <div class="help-card">
+      <h3>Locker & Slipper Stand</h3>
+      <p>Baggage & footwear deposit locations.</p>
+      <a class="map" href="https://maps.google.com/?q=Locker Facility Tirumala" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Locker%20facility%20help" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Rules:</strong> Mobile phones, bags & dress code rules</li>
+    <!-- BUS STAND -->
+    <div class="help-card">
+      <h3>Bus Stand & Transport</h3>
+      <p>APSRTC bus stand & routes.</p>
+      <a class="map" href="https://maps.google.com/?q=Tirumala Bus Stand" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Bus%20stand%20help" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Emergency Help:</strong> Medical centers & emergency contacts</li>
+    <!-- EMERGENCY -->
+    <div class="help-card">
+      <h3>Emergency & Medical</h3>
+      <p>Hospitals & emergency help.</p>
+      <a class="map" href="https://maps.google.com/?q=Medical Center Tirumala" target="_blank">📍 View Location</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Emergency%20help%20needed" target="_blank">💬 WhatsApp Help</a>
+    </div>
 
-    <li><strong>Spiritual Info:</strong> Festivals, rituals & bhakti content</li>
-  </ul>
+  </div>
 </section>
-
 
 <section>
   <h2>How This Works</h2>

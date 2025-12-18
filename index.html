@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tirumala Live Pilgrim Help</title>
-<style>
-  
+  <meta charset="UTF-8">
+  <title>Tirumala Live Pilgrim Help</title>
+
+  <!-- ADD YOUR STYLE HERE -->
+  <style>
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .help-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .help-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .help-card h3 {
+      margin: 10px 0 5px;
+      color: #7b1e1e;
+    }
+
+    .help-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .help-card a {
+      display: inline-block;
+      margin: 6px 4px;
+      padding: 8px 12px;
+      font-size: 13px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .map-btn {
+      background: #1a73e8;
+      color: #fff;
+    }
+
+    .wa-btn {
+      background: #25D366;
+      color: #fff;
+    }
+  </style>
+</head>
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -154,75 +208,91 @@ section li {
 
 </header>
   
- <section>
-  <h2>What We Help You With</h2>
+<section>
+  <h2 style="text-align:center;color:#7b1e1e;">What We Help You With</h2>
 
   <div class="help-grid">
 
     <!-- DARSHAN QUEUES -->
     <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?tirumala,temple,queue" alt="Darshan Queues">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Tirumala_Darshan_Queue.jpg">
       <h3>Darshan Queues</h3>
       <p>Sarva Darshan, Footpath & VIP Break Darshan guidance</p>
-      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Darshan+Queue+Complex" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/919632723847" target="_blank">💬 Ask on WhatsApp</a>
+      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Darshan+Queue" target="_blank">📍 View Location</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
+    </div>
+
+    <!-- RESTROOMS -->
+    <div class="help-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Public_Toilet_India.jpg">
+      <h3>Restrooms & Water</h3>
+      <p>Nearest toilets & drinking water points</p>
+      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Restrooms" target="_blank">📍 View Location</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
     </div>
 
     <!-- ANNA PRASADAM -->
     <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?annadanam,temple,food" alt="Anna Prasadam">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Annadanam_Tirumala.jpg">
       <h3>Anna Prasadam</h3>
       <p>Free food timings & locations</p>
-      <a class="map-btn" href="https://maps.google.com/?q=TTD+Annadanam+Tirumala" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 Ask on WhatsApp</a>
+      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Annadanam" target="_blank">📍 View Location</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
     </div>
 
     <!-- LADDU COUNTER -->
     <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?tirupati,laddu,prasadam" alt="Laddu Counter">
-      <h3>Laddu Prasadam</h3>
-      <p>Tokens, counters & collection points</p>
-      <a class="map-btn" href="https://maps.google.com/?q=Laddu+Counter+Tirumala" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 Ask on WhatsApp</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Tirupati_Laddu.jpg">
+      <h3>Laddu Counter</h3>
+      <p>Token & laddu collection counters</p>
+      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Laddu+Counter" target="_blank">📍 View Location</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
     </div>
 
-    <!-- MUDI (TONSURE) -->
+    <!-- MUDI -->
     <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?tirumala,tonsure" alt="Mudi">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Tirumala_Mudi.jpg">
       <h3>Mudi (Tonsure)</h3>
-      <p>Free & paid hair offering counters</p>
-      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Tonsure+Hall" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 Ask on WhatsApp</a>
+      <p>Hair offering counters (free & paid)</p>
+      <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Mudi+Counter" target="_blank">📍 View Location</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
     </div>
 
-    <!-- LOCKERS & SLIPPERS -->
+    <!-- LOCKERS -->
     <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?temple,footwear,locker" alt="Lockers">
-      <h3>Lockers & Slipper Stand</h3>
-      <p>Baggage & footwear deposit locations</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Temple_Locker.jpg">
+      <h3>Lockers & Slippers</h3>
+      <p>Baggage & footwear deposit</p>
       <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Locker+Facility" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 Ask on WhatsApp</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
     </div>
 
     <!-- BUS STAND -->
     <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?bus,temple,hill" alt="Bus Stand">
-      <h3>Bus Stand & Transport</h3>
-      <p>Bus stand, Srivari Mettu & Alipiri routes</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Tirumala_Bus_Stand.jpg">
+      <h3>Bus Stand</h3>
+      <p>APSRTC & local transport</p>
       <a class="map-btn" href="https://maps.google.com/?q=Tirumala+Bus+Stand" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 Ask on WhatsApp</a>
+      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp Help</a>
     </div>
+    
+    <!-- MEDICAL & EMERGENCY -->
+<div class="help-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Hospital_India.jpg">
+  <h3>Medical & Emergency</h3>
+  <p>TTD hospitals, first aid & emergency help</p>
+  <a class="map-btn"
+     href="https://maps.google.com/?q=TTD+SVIMS+Hospital+Tirumala"
+     target="_blank">
+     📍 View Location
+  </a>
+  <a class="wa-btn"
+     href="https://wa.me/91XXXXXXXXXX?text=I%20need%20medical%20help%20in%20Tirumala"
+     target="_blank">
+     💬 WhatsApp Help
+  </a>
+</div>
 
-    <!-- MEDICAL -->
-    <div class="help-card">
-      <img src="https://source.unsplash.com/400x300/?hospital,temple" alt="Medical Help">
-      <h3>Medical & Emergency</h3>
-      <p>Hospitals & emergency contacts</p>
-      <a class="map-btn" href="https://maps.google.com/?q=TTD+Hospital+Tirumala" target="_blank">📍 View Location</a>
-      <a class="wa-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 Ask on WhatsApp</a>
-    </div>
-
-  </div>
 </section>
 
 <section>

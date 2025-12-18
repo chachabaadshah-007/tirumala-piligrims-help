@@ -1,241 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Tirumala Live Pilgrim Help</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
-
-header {
-  background: #7b1e1e;
-  color: #fff;
-  text-align: center;
-  padding: 25px 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-header p {
-  margin: 8px 0 0;
-  font-size: 14px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* LOCK OVERLAY */
+body {font-family: Arial; background:#f4f4f4; margin:0}
+header {background:#7b1e1e; color:#fff; padding:20px; text-align:center}
 .lock-box {
-  background: #fff3cd;
-  border: 1px solid #ffeeba;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 25px;
+  background:#fff;
+  margin:20px auto;
+  padding:25px;
+  max-width:600px;
+  border-radius:10px;
+  border:2px solid #7b1e1e;
+  text-align:center;
 }
-
-.lock-box h2 {
-  margin-top: 0;
-  color: #856404;
+.upi {font-size:28px; font-weight:bold; margin:15px 0}
+.btn {
+  display:inline-block;
+  padding:14px 20px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
 }
-
-.pay-btn {
-  display: inline-block;
-  padding: 12px 18px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* PAYMENT MODAL */
-#paymentBox {
-  display: none;
-  background: #fff;
-  border: 2px solid #7b1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-#paymentBox h2 {
-  color: #7b1e1e;
-  text-align: center;
-}
-
-.upi {
-  font-size: 26px;
-  font-weight: bold;
-  text-align: center;
-  margin: 15px 0;
-  color: #000;
-}
-
-.unlock-btn {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background: #25D366;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* SERVICES */
-.help-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 15px;
+.blur {
   filter: blur(6px);
-  pointer-events: none;
+  pointer-events:none;
 }
-
-.help-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.help-card h3 {
-  margin-top: 0;
-  color: #7b1e1e;
-}
-
-.help-card a {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 10px;
-  background: #0b5ed7;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 13px;
-}
-
-/* UNLOCKED STATE */
-.unlocked .help-grid {
-  filter: none;
-  pointer-events: auto;
-}
-
-/* SUPPORT */
-.support {
-  margin-top: 30px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  padding: 15px;
-  color: #555;
+.card {
+  background:#fff;
+  padding:15px;
+  margin:10px;
+  border-radius:8px;
 }
 </style>
 </head>
 
 <body>
+  <section style="margin:30px 15px;">
+  <h2 style="text-align:center;color:#7b1e1e;">🎶 Lord Venkateswara Bhakti Songs</h2>
+  <p style="text-align:center;">Select language and listen to divine songs of Lord Venkateswara Swamy 🙏</p>
+
+  <!-- TELUGU SONGS -->
+  <div class="card">
+    <h3 style="color:#7b1e1e;">🎧 Telugu Bhakti Songs</h3>
+    <ol>
+      <li><a href="https://www.youtube.com/watch?v=ZkC1m5zKJ5k" target="_blank">Suprabhatam – MS Subbulakshmi</a></li>
+      <li><a href="https://www.youtube.com/watch?v=V0D3OeL7n0k" target="_blank">Govinda Namalu (108 Names)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=7WZKZ5EJwGQ" target="_blank">Brahmotsavam Song – Tirumala</a></li>
+      <li><a href="https://www.youtube.com/watch?v=H2RkT5M4QkY" target="_blank">Venkatesa Suprabhatam (Full)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=5jA8z5YxM8s" target="_blank">Sri Venkateswara Mangalam</a></li>
+      <li><a href="https://www.youtube.com/watch?v=0CzY4y8W5oE" target="_blank">Hari Om Namah Shivaya – Venkateswara Version</a></li>
+      <li><a href="https://www.youtube.com/watch?v=K9r1zWw5Aqk" target="_blank">Om Namo Venkatesaya</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Qx6zYwZp6tI" target="_blank">Venkata Ramana Govinda</a></li>
+    </ol>
+  </div>
+
+  <!-- KANNADA SONGS -->
+  <div class="card">
+    <h3 style="color:#7b1e1e;">🎧 Kannada Bhakti Songs</h3>
+    <ol>
+      <li><a href="https://www.youtube.com/watch?v=5zJ7P7E2QX4" target="_blank">Tirupati Girivasa – Kannada</a></li>
+      <li><a href="https://www.youtube.com/watch?v=4Q7k0JXJbCg" target="_blank">Sri Venkateswara Stotram (Kannada)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Z7P7pN2Lw3E" target="_blank">Govinda Govinda – Kannada Bhajan</a></li>
+      <li><a href="https://www.youtube.com/watch?v=KkN1D4mLZgY" target="_blank">Venkatesa Namavali – Kannada</a></li>
+      <li><a href="https://www.youtube.com/watch?v=8Xc1V7xRZ5Y" target="_blank">Sri Tirupati Venkataramana – Kannada</a></li>
+    </ol>
+  </div>
+</section>
+
 
 <header>
-  <h1>Tirumala Live Pilgrim Help</h1>
-  <p>Real-time directions & guidance • Independent service • Not affiliated with TTD</p>
-  <p><strong>Pay ₹5 once → Unlock all locations</strong></p>
+<h1>Tirumala Live Pilgrim Help</h1>
+<p>Pay ₹5 once → Unlock all locations & guidance</p>
+<p><small>Independent service. Not affiliated with TTD.</small></p>
 </header>
 
-<div class="container" id="main">
+<div class="lock-box">
+<h2>🔐 Pay ₹5 via UPI</h2>
+<p>Send ₹5 to this UPI ID:</p>
+<div class="upi">profesorsergio@ybl</div>
 
-  <div class="lock-box">
-    <h2>🔒 Unlock All Services – ₹5 Only</h2>
-    <p>Scan & pay ₹5 using any UPI app.</p>
-    <a class="pay-btn" onclick="showPayment()">Pay Now</a>
-  </div>
+<p>After payment, click below and send screenshot.</p>
 
-  <div id="paymentBox">
-    <h2>Pay ₹5 via UPI</h2>
-    <p style="text-align:center;">Send ₹5 to this UPI ID:</p>
-    <div class="upi">profesorsergio@ybl</div>
-
-    <p style="text-align:center;font-size:13px;">
-      After payment, click the button below.
-    </p>
-
-    <button class="unlock-btn" onclick="unlockServices()">I Have Paid ₹5 – Unlock</button>
-  </div>
-
-  <section>
-    <h2>📍 Pilgrim Services</h2>
-
-    <div class="help-grid">
-      <div class="help-card">
-        <h3>Darshan Queues</h3>
-        <a href="https://maps.google.com/?q=Vaikuntham+Queue+Complex+Tirumala" target="_blank">View Location</a>
-      </div>
-
-      <div class="help-card">
-        <h3>Restrooms & Water</h3>
-        <a href="https://maps.google.com/?q=Tirumala+Restrooms" target="_blank">View Location</a>
-      </div>
-
-      <div class="help-card">
-        <h3>Anna Prasadam</h3>
-        <a href="https://maps.google.com/?q=Anna+Prasadam+Tirumala" target="_blank">View Location</a>
-      </div>
-
-      <div class="help-card">
-        <h3>Laddu Counter</h3>
-        <a href="https://maps.google.com/?q=Laddu+Counter+Tirumala" target="_blank">View Location</a>
-      </div>
-
-      <div class="help-card">
-        <h3>Mudi (Tonsure)</h3>
-        <a href="https://maps.google.com/?q=Mudi+Katta+Tirumala" target="_blank">View Location</a>
-      </div>
-
-      <div class="help-card">
-        <h3>Medical Emergency</h3>
-        <a href="https://maps.google.com/?q=Medical+Center+Tirumala" target="_blank">View Location</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="support">
-    <h3>💬 Support</h3>
-    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
-  </div>
-
+<a class="btn"
+href="https://wa.me/91XXXXXXXXXX?text=I%20have%20paid%20₹5.%20Please%20unlock%20access.%20(Screenshot%20attached)"
+target="_blank">
+📲 Confirm Payment on WhatsApp
+</a>
 </div>
 
-<footer>
-  Independent pilgrim help service. Not affiliated with TTD.
-</footer>
+<h2 style="text-align:center">Pilgrim Services (Locked)</h2>
 
-<script>
-function showPayment() {
-  document.getElementById("paymentBox").style.display = "block";
-}
-
-function unlockServices() {
-  document.getElementById("main").classList.add("unlocked");
-  alert("Thank you 🙏 Services unlocked.");
-}
-</script>
+<div class="blur">
+  <div class="card">Darshan Queues</div>
+  <div class="card">Restrooms & Water</div>
+  <div class="card">Anna Prasadam</div>
+  <div class="card">Laddu Counter</div>
+  <div class="card">Mudi (Tonsure)</div>
+  <div class="card">Lockers & Slippers</div>
+  <div class="card">Bus Stand</div>
+  <div class="card">Medical Emergency</div>
+</div>
 
 </body>
 </html>

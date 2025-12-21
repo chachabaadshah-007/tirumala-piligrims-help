@@ -5,94 +5,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+./* FULL WIDTH FOOTER SECTION */
 .footer-section{
-  background:#2f2f2f;
-  color:white;
-  padding:40px 20px;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  width:100%;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("https://upload.wikimedia.org/wikipedia/commons/7/7f/Tirumala_Temple_Andhra_Pradesh.jpg");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:50px 30px;
+  box-sizing:border-box;
 }
 
-.footer-title{
+/* FOOTER TITLE */
+.footer-section h2{
   text-align:center;
-  color:#ffcc00;
-  font-size:28px;
-  margin-bottom:10px;
+  color:#FFD700;
+  margin-bottom:15px;
 }
 
-.footer-desc{
+/* FOOTER TEXT */
+.footer-section p{
   text-align:center;
   max-width:900px;
-  margin:0 auto 30px;
-  color:#e0e0e0;
+  margin:0 auto 35px;
+  line-height:1.7;
+  font-size:15px;
+  color:#f1f1f1;
 }
 
+/* HORIZONTAL IMAGE ROW */
 .footer-gallery{
   display:flex;
+  justify-content:space-between;
   gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
 
+/* IMAGE CARD */
 .footer-card{
-  background:#444;
+  background:#222;
   border-radius:12px;
-  width:260px;
+  width:23%;
   overflow:hidden;
-  box-shadow:0 6px 15px rgba(0,0,0,0.4);
+  box-shadow:0 6px 15px rgba(0,0,0,0.5);
 }
 
+/* IMAGE */
 .footer-card img{
   width:100%;
   height:160px;
   object-fit:cover;
 }
 
-.footer-card h4{
-  color:#ffcc00;
-  margin:10px;
+/* IMAGE TEXT */
+.footer-card div{
+  padding:12px;
+  text-align:center;
 }
 
-.footer-card p{
-  margin:0 10px 15px;
-  font-size:14px;
+.footer-card h4{
+  color:#FFD700;
+  margin:6px 0;
+  font-size:15px;
+}
+
+.footer-card span{
+  font-size:13px;
   color:#ddd;
 }
-
-.footer-note{
-  text-align:center;
-  margin-top:25px;
-  font-size:13px;
-  color:#ccc;
-}
-  .footer-section{
-  height:420px;
-}
-  .footer-section{
-  background:#3e3e3e;
-  padding:40px 20px;
-}
-
-.footer-container{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  gap:20px;
-  justify-content:space-between;
-  align-items:stretch;
-}
-
-.footer-card{
-  background:#4a4a4a;
-  border-radius:12px;
-  flex:1;              /* ⭐ MAGIC LINE */
-  padding:20px;
-  color:white;
-  box-shadow:0 6px 15px rgba(0,0,0,0.4);
-}
-
 
 body{
   font-family: Arial, sans-serif;
@@ -292,60 +274,60 @@ a{
 </ul>
 </div>
 
-<div class="holy-section">
-  <div class="holy-overlay">
+<!-- FOOTER HISTORY SECTION -->
+<div class="footer-section">
 
- <section class="footer-section">
+<h2>🛕 Tirumala – The Sacred Seven Hills</h2>
 
- <section class="footer-section">
+<p>
+Tirumala is one of the most ancient and powerful Hindu pilgrimage centers in the world.
+It is believed that Lord Sri Venkateswara manifested here to save mankind during Kali Yuga.
+The seven hills (Saptagiri) symbolize the seven divine hoods of Adisesha.
+Every stone, water stream, and pathway in Tirumala carries spiritual energy and centuries of devotion.
+</p>
 
-  <h2 class="footer-title">🛕 Tirumala – The Sacred Seven Hills</h2>
+<div class="footer-gallery">
 
-  <p class="footer-desc">
-    Tirumala is one of the holiest Hindu pilgrimage destinations, abode of Lord
-    Sri Venkateswara Swamy, situated on the sacred Saptagiri (Seven Hills).
-  </p>
-
-  <div class="footer-gallery">
-
-    <div class="footer-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Tirumala_Temple.jpg">
-      <h4>Tirumala Temple</h4>
-      <p>Main shrine of Lord Venkateswara Swamy.</p>
+  <div class="footer-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tirumala_Venkateswara_Temple.jpg">
+    <div>
+      <h4>Srivari Temple</h4>
+      <span>One of the richest & most visited temples on Earth</span>
     </div>
+  </div>
 
-    <div class="footer-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Tirumala_Ghat_Road.jpg">
-      <h4>Tirumala Ghat Road</h4>
-      <p>Scenic mountain road connecting Tirupati to Tirumala.</p>
+  <div class="footer-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tirumala_Ghat_Road.jpg">
+    <div>
+      <h4>Ghat Road</h4>
+      <span>Scenic divine path connecting Tirupati to Tirumala</span>
     </div>
+  </div>
 
-    <div class="footer-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Silathoranam_Tirumala.jpg">
+  <div class="footer-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Silathoranam_Tirumala.jpg">
+    <div>
       <h4>Silathoranam</h4>
-      <p>Rare natural rock arch and geological wonder.</p>
+      <span>Rare natural rock arch older than Himalayas</span>
     </div>
+  </div>
 
-    <div class="footer-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Akasha_Ganga_Tirumala.jpg">
+  <div class="footer-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Akasha_Ganga_Tirumala.jpg">
+    <div>
       <h4>Akasha Ganga</h4>
-      <p>Sacred waterfall used for temple rituals.</p>
+      <span>Sacred water used in daily temple rituals</span>
     </div>
-
   </div>
 
-  <div class="footer-note">
-    Independent Pilgrim Guide · Not affiliated with TTD<br>
-    Designed to help devotees with locations, timings & rules
-  </div>
+</div>
 
-</section>
+<p style="margin-top:35px; font-size:13px; opacity:0.85;">
+Independent Pilgrim Guide • Not affiliated with TTD • Built with devotion for devotees
+</p>
 
-  <p class="footer-note">
-    Independent Pilgrim Guide · Not affiliated with TTD<br>
-    Designed to help devotees with accurate locations, timings & rules
-  </p>
-</section>
+</div>
+
 
 
 

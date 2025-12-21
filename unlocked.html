@@ -5,63 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-.tirumala-gallery{
-  background: linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.55)
-  ),
-  url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Tirumala_Hills_View.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 50px 20px;
-  color: #fff;
-  text-align: center;
+.holy-section{
+  background:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Tirumala_Hills_View.jpg") center/cover no-repeat;
+  padding:40px 20px;
+  margin-top:30px;
+  border-radius:18px;
 }
 
-.tirumala-gallery h2{
-  color: #ffd700;
-  margin-bottom: 10px;
+.holy-overlay{
+  background:rgba(0,0,0,0.65);
+  padding:30px;
+  border-radius:18px;
 }
 
-.subtitle{
-  color: #e0e0e0;
-  margin-bottom: 30px;
-  font-size: 15px;
+.holy-title{
+  color:#FFD700;
+  text-align:center;
+  font-size:26px;
+  margin-bottom:10px;
 }
 
-.gallery-row{
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+.holy-desc{
+  color:#eee;
+  text-align:center;
+  margin-bottom:25px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.place-card{
-  background: #ffffff;
-  color: #000;
-  width: 240px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+.holy-grid{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  padding-bottom:10px;
 }
 
-.place-card img{
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+.holy-card{
+  min-width:260px;
+  background:#222;
+  border-radius:14px;
+  color:#fff;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+  flex-shrink:0;
 }
 
-.place-card h3{
-  color: #7b1e1e;
-  margin: 10px 0 5px;
+.holy-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:14px 14px 0 0;
 }
 
-.place-card p{
-  font-size: 13px;
-  padding: 0 10px 12px;
-  color: #333;
+.holy-card h3{
+  color:#FFD700;
+  margin:10px;
 }
 
+.holy-card p{
+  font-size:14px;
+  margin:0 10px 10px;
+  color:#ddd;
+}
+
+.holy-card a{
+  display:block;
+  margin:10px;
+  padding:8px;
+  background:#0b5ed7;
+  color:#fff;
+  text-align:center;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
 body{
   font-family: Arial, sans-serif;
@@ -261,39 +278,64 @@ a{
 </ul>
 </div>
 
-<section class="tirumala-gallery">
-  <h2>🛕 Tirumala – The Sacred Seven Hills</h2>
-  <p class="subtitle">
-    Holy places of Lord Sri Venkateswara Swamy on Tirumala Hills
-  </p>
+<div class="holy-section">
+  <div class="holy-overlay">
 
-  <div class="gallery-row">
+    <h2 class="holy-title">🛕 Tirumala – The Sacred Seven Hills</h2>
+    <p class="holy-desc">
+      Tirumala is one of the holiest Hindu pilgrimage centres, abode of Lord Sri Venkateswara Swamy,
+      situated on the sacred Saptagiri (Seven Hills).
+    </p>
 
-    <div class="place-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Tirumala_Temple.jpg" alt="Tirumala Temple">
-      <h3>Tirumala Temple</h3>
-      <p>Main shrine of Lord Venkateswara Swamy</p>
-    </div>
+    <div class="holy-grid">
 
-    <div class="place-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Tirumala_Ghat_Road.jpg" alt="Tirumala Ghat Road">
-      <h3>Tirumala Ghat Road</h3>
-      <p>Scenic mountain road from Tirupati to Tirumala</p>
-    </div>
+      <div class="holy-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tirumala_Temple.jpg">
+        <h3>Tirumala Temple</h3>
+        <p>Main shrine of Lord Venkateswara Swamy.</p>
+        <a href="https://maps.google.com/?q=Tirumala Temple" target="_blank">📍 View Map</a>
+      </div>
 
-    <div class="place-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Silathoranam_Tirumala.jpg" alt="Silathoranam">
-      <h3>Silathoranam</h3>
-      <p>Natural rock arch, a geological wonder</p>
-    </div>
+      <div class="holy-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Tirumala_Ghat_Road.jpg">
+        <h3>Tirumala Ghat Road</h3>
+        <p>Scenic mountain road connecting Tirupati to Tirumala.</p>
+        <a href="https://maps.google.com/?q=Tirumala Ghat Road" target="_blank">📍 View Map</a>
+      </div>
 
-    <div class="place-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Akasa_Ganga_Tirumala.jpg" alt="Akasha Ganga">
-      <h3>Akasha Ganga</h3>
-      <p>Sacred waterfall used for temple rituals</p>
+      <div class="holy-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Silathoranam_Tirumala.jpg">
+        <h3>Silathoranam</h3>
+        <p>Natural rock arch & geological wonder.</p>
+        <a href="https://maps.google.com/?q=Silathoranam Tirumala" target="_blank">📍 View Map</a>
+      </div>
+
+      <div class="holy-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Akasha_Ganga_Tirumala.jpg">
+        <h3>Akasha Ganga</h3>
+        <p>Sacred waterfall used for temple rituals.</p>
+        <a href="https://maps.google.com/?q=Akasha Ganga Tirumala" target="_blank">📍 View Map</a>
+      </div>
+
+      <div class="holy-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Papavinasanam_Tirumala.jpg">
+        <h3>Papavinasanam</h3>
+        <p>Holy waterfall believed to cleanse sins.</p>
+        <a href="https://maps.google.com/?q=Papavinasanam Tirumala" target="_blank">📍 View Map</a>
+      </div>
+
+      <div class="holy-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Japali_Hanuman_Temple.jpg">
+        <h3>Japali Hanuman Temple</h3>
+        <p>Temple where Lord Hanuman meditated.</p>
+        <a href="https://maps.google.com/?q=Japali Hanuman Temple Tirumala" target="_blank">📍 View Map</a>
+      </div>
+
     </div>
 
   </div>
+</div>
+
 </section>
 
 

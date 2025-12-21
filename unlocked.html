@@ -7,39 +7,63 @@
 <style>
 body{
   font-family: Arial, sans-serif;
-  background:#eef2f5;
   margin:0;
+  background:#eef2f5;
 }
+
 header{
   background:#7b1e1e;
-  color:white;
+  color:#fff;
   padding:25px;
   text-align:center;
 }
+
+/* GRID LAYOUT */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:18px;
+  padding:18px;
+}
+
+/* CARD DESIGN */
 .card{
-  background:white;
-  margin:16px;
+  background:#fff;
   padding:16px;
-  border-radius:10px;
-  border-left:6px solid #7b1e1e;
+  border-radius:12px;
+  border-top:6px solid #7b1e1e;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
-h2{
+
+.card h2{
+  margin-top:0;
   color:#7b1e1e;
+  font-size:20px;
 }
+
+ul{
+  padding-left:18px;
+}
+
+ul li{
+  margin-bottom:6px;
+  font-size:14px;
+}
+
 a{
   color:#0b5ed7;
   font-weight:bold;
   text-decoration:none;
 }
-ul li{
-  margin-bottom:8px;
-}
-.section-title{
+
+.tag{
+  display:inline-block;
   background:#198754;
-  color:white;
-  padding:10px;
-  border-radius:6px;
-  margin-bottom:10px;
+  color:#fff;
+  padding:4px 8px;
+  border-radius:5px;
+  font-size:12px;
+  margin-bottom:6px;
 }
 </style>
 </head>
@@ -48,104 +72,118 @@ ul li{
 
 <header>
 <h1>✅ Tirumala Pilgrim Guide – Full Access</h1>
-<p>All locations, timings & guidance in one place</p>
+<p>All locations, timings & rules in one place</p>
 </header>
 
+<div class="grid">
+
+<!-- DARSHAN -->
 <div class="card">
-<div class="section-title">🛕 Darshan Queues</div>
+<span class="tag">DARSHAN</span>
+<h2>🛕 Darshan Queues</h2>
 <ul>
 <li>Sarva Darshan – Vaikuntham Queue Complex (24×7)</li>
-<li>VIP Break Darshan – Supatham Entry (Limited slots)</li>
+<li>VIP Break Darshan – Supatham Entry</li>
 <li>Footpath Darshan – Srivari Mettu & Alipiri</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Vaikuntham Queue Complex Tirumala" target="_blank">Vaikuntham Queue Complex</a>
+📍 <a href="https://maps.google.com/?q=Vaikuntham Queue Complex Tirumala" target="_blank">Open Map</a>
 </div>
 
+<!-- ROOMS -->
 <div class="card">
-<div class="section-title">🏨 TTD Rooms & CRO Office</div>
+<span class="tag">ACCOMMODATION</span>
+<h2>🏨 TTD Rooms & CRO</h2>
 <ul>
-<li>CRO Office Timings: 5:00 AM – 11:00 PM</li>
-<li>Rooms allotted for SAME DAY only</li>
+<li>CRO Timings: 5:00 AM – 11:00 PM</li>
+<li>Same-day allotment only</li>
 <li>ID proof mandatory</li>
-<li>Maximum stay: 24 hours</li>
+<li>Max stay: 24 hours</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=CRO Office Tirumala" target="_blank">CRO Office Location</a>
+📍 <a href="https://maps.google.com/?q=CRO Office Tirumala" target="_blank">CRO Location</a>
 </div>
 
+<!-- LOCKERS -->
 <div class="card">
-<div class="section-title">🎒 Lockers, Baggage & Slipper Stands</div>
+<span class="tag">FACILITIES</span>
+<h2>🎒 Lockers & Slipper Stands</h2>
 <ul>
-<li>Locker counters near Vaikuntham Queue Complex</li>
-<li>Slipper stands near temple entry points</li>
-<li>Baggage counters near bus stand & CRO</li>
-<li>Timings: 24×7</li>
+<li>Near Vaikuntham Queue Complex</li>
+<li>Near Temple entry gates</li>
+<li>Baggage counters near Bus Stand</li>
+<li>Open 24×7</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Tirumala Locker Facility" target="_blank">Locker Facility</a><br>
-📍 <a href="https://maps.google.com/?q=Tirumala Slipper Stand" target="_blank">Slipper Stand</a>
+📍 <a href="https://maps.google.com/?q=Tirumala Locker Facility" target="_blank">Locker Location</a>
 </div>
 
+<!-- RESTROOMS -->
 <div class="card">
-<div class="section-title">🚿 Restrooms & Drinking Water</div>
+<span class="tag">FACILITIES</span>
+<h2>🚿 Restrooms & Water</h2>
 <ul>
-<li>Sulabh Toilet Complexes across Tirumala</li>
-<li>Free & paid restrooms available</li>
-<li>Water points near queues & temples</li>
-<li>Timings: 24×7</li>
+<li>Sulabh complexes across Tirumala</li>
+<li>Free & paid toilets available</li>
+<li>Drinking water near queues</li>
+<li>24×7 availability</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Sulabh Toilet Tirumala" target="_blank">Sulabh Toilets</a>
+📍 <a href="https://maps.google.com/?q=Sulabh Toilet Tirumala" target="_blank">Restrooms</a>
 </div>
 
+<!-- MUDI -->
 <div class="card">
-<div class="section-title">✂️ Mudi Kattu (Tonsure)</div>
+<span class="tag">SEVA</span>
+<h2>✂️ Mudi Kattu</h2>
 <ul>
-<li>Free tonsure halls for all pilgrims</li>
-<li>Paid tonsure rooms also available</li>
-<li>Hair offering done before darshan</li>
-<li>Timings: 5:00 AM – 6:00 PM</li>
+<li>Free tonsure halls</li>
+<li>Paid rooms available</li>
+<li>Before darshan</li>
+<li>Timings: 5 AM – 6 PM</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Mudi Katta Tirumala" target="_blank">Mudi Kattu Location</a>
+📍 <a href="https://maps.google.com/?q=Mudi Katta Tirumala" target="_blank">Mudi Location</a>
 </div>
 
+<!-- FOOD -->
 <div class="card">
-<div class="section-title">🍛 Anna Prasadam & Laddu</div>
+<span class="tag">PRASADAM</span>
+<h2>🍛 Anna Prasadam & Laddu</h2>
 <ul>
 <li>Anna Prasadam: 24×7 free food</li>
-<li>Laddu counters open after darshan</li>
-<li>Max 2 laddus per darshan ticket</li>
+<li>Laddu counters after darshan</li>
+<li>Max 2 laddus per ticket</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Anna Prasadam Tirumala" target="_blank">Anna Prasadam Hall</a><br>
-📍 <a href="https://maps.google.com/?q=Laddu Counter Tirumala" target="_blank">Laddu Counter</a>
+📍 <a href="https://maps.google.com/?q=Anna Prasadam Tirumala" target="_blank">Anna Prasadam</a>
 </div>
 
+<!-- HOLY PLACES -->
 <div class="card">
-<div class="section-title">🌿 Holy Places in Tirumala</div>
+<span class="tag">HOLY PLACES</span>
+<h2>🌿 Tirumala Sacred Spots</h2>
 <ul>
 <li>Japali Hanuman Temple</li>
-<li>Papavinasanam Theertham</li>
+<li>Papavinasanam</li>
 <li>Srivari Padalu</li>
-<li>Silathoranam Natural Arch</li>
+<li>Silathoranam</li>
 <li>Akasha Ganga</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Japali Anjaneya Temple Tirumala" target="_blank">Japali</a><br>
-📍 <a href="https://maps.google.com/?q=Papavinasanam Tirumala" target="_blank">Papavinasanam</a><br>
-📍 <a href="https://maps.google.com/?q=Srivari Padalu Tirumala" target="_blank">Srivari Padalu</a><br>
-📍 <a href="https://maps.google.com/?q=Silathoranam Tirumala" target="_blank">Silathoranam</a><br>
-📍 <a href="https://maps.google.com/?q=Akasha Ganga Tirumala" target="_blank">Akasha Ganga</a>
+📍 <a href="https://maps.google.com/?q=Japali Anjaneya Temple Tirumala" target="_blank">Open Map</a>
 </div>
 
+<!-- TRANSPORT -->
 <div class="card">
-<div class="section-title">🚌 Transport & Fares</div>
+<span class="tag">TRANSPORT</span>
+<h2>🚌 Transport & Fares</h2>
 <ul>
-<li>APSRTC Bus (Non-AC) Tirupati ↔ Tirumala: ₹50–₹60</li>
-<li>APSRTC Bus (AC) Tirupati ↔ Tirumala: ₹90–₹110</li>
-<li>Jeep Fare: ₹300–₹400</li>
-<li>Cab Fare: ₹800–₹1200</li>
+<li>APSRTC Bus: ₹50–₹60</li>
+<li>APSRTC AC: ₹90–₹110</li>
+<li>Jeep: ₹300–₹400</li>
+<li>Cab: ₹800–₹1200</li>
 </ul>
-📍 <a href="https://maps.google.com/?q=Tirumala Bus Stand" target="_blank">Tirumala Bus Stand</a>
+📍 <a href="https://maps.google.com/?q=Tirumala Bus Stand" target="_blank">Bus Stand</a>
 </div>
 
+<!-- WEEKLY SEVAS -->
 <div class="card">
-<div class="section-title">📅 Weekly Seva Names</div>
+<span class="tag">SEVAS</span>
+<h2>📅 Weekly Sevas</h2>
 <ul>
 <li>Monday – Visesha Pooja</li>
 <li>Tuesday – Ashtadala Pada Padmaradhana</li>
@@ -154,13 +192,17 @@ ul li{
 </ul>
 </div>
 
+<!-- BHAKTI -->
 <div class="card">
-<div class="section-title">🎵 Bhakti Songs (Telugu & Kannada)</div>
+<span class="tag">BHAKTI</span>
+<h2>🎵 Devotional Songs</h2>
 <ul>
 <li><a href="https://www.youtube.com/results?search_query=Venkateswara+Suprabhatam+Telugu" target="_blank">Telugu Suprabhatam</a></li>
 <li><a href="https://www.youtube.com/results?search_query=Govinda+Namalu+Kannada" target="_blank">Kannada Govinda Namalu</a></li>
 <li><a href="https://www.youtube.com/results?search_query=Annamacharya+Keerthanalu+Venkateswara" target="_blank">Annamacharya Keerthanalu</a></li>
 </ul>
+</div>
+
 </div>
 
 </body>
